@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --gradient: linear-gradient(195deg, #1983d5, #1ac3c6);
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: white;
+        font-size: 30px;
+      }
+
+      .container form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+        background-image: var(--gradient);
+        border-radius: 1px;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
+          0 7px 10px -5px rgba(12, 29, 121, 0.7);
+      }
+
+      .container form div {
+        display: flex;
+        gap: 10px;
+      }
+
+      .container form div input,
+      .container form div label {
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+
+      .container form div input {
+        border-radius: 2px;
+        border: ridge;
+      }
+    </style>
+  </head>
+  <body style="background-color:rgb(199, 246, 253)"">
+    
+    <h1 align="center">
+      Brownian Motion and Geometric Brownian Motion Path Generator 
+    </h1>
+    <br>
+    <h4 align="right">- Made by Abana Sidhu</h4>
+    <h4 align="right"> 200123001</h4>
+    <div class="container">
+      <div>
+
+        <h5 align="center" style="color:black">Enter Values to generate paths</h5>
+        
+        <form method="post">
+          {% for field in form %}
+          <div>
+            <label for="{{ field.id_for_label }}">{{field.label_tag}}</label>
+            {{ field }}
+          </div>
+          {% endfor %}
+          
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

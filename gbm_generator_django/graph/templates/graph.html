@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+          rel="stylesheet"
+        />
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img alt="Graph" src="{{ image }}" />
+            <h3>Calculated Variance for given number for paths : {{ calculated_variance }}</h3>
+            <h3>Theoretical Variance : {{ theoretical_variance }}</h3>
+            <h3>Calculated Mean for given number for paths : {{ calculated_mean }}</h3>
+            <h3>Theoretical Mean : {{ theoretical_mean }}</h3>
+        </div>
+    </body>
+</html>
